@@ -15,9 +15,7 @@ public class player : MonoBehaviour {
 
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float controlPitchFactor = -10f;
-
     [SerializeField] float positionYawFactor = 5f;
-
     [SerializeField] float controlRollFactor = 5f;
 
     float xThrow, yThrow;
@@ -38,36 +36,36 @@ public class player : MonoBehaviour {
 
     private void ProcessRotation()
     {
-        float pitchDueToPosition = this.transform.localPosition.y * positionPitchFactor;
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float pitchDueToControlThrow = yThrow * controlPitchFactor;
         float pitch = pitchDueToPosition + pitchDueToControlThrow;
 
-        float yaw = this.transform.localPosition.x * positionYawFactor;
+        float yaw = transform.localPosition.x * positionYawFactor;
 
         float roll = xThrow * controlRollFactor;
 
-        this.transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     private void ProcessTranslation()
     {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float xOffset = xThrow * xSpeed * Time.deltaTime;
         //multiplied by time.delta time to keep framerate independent.
 
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical");
         float yOffset = yThrow * ySpeed * Time.deltaTime;
 
         float rawXPosition = transform.localPosition.x + xOffset;
         float clampedXPosition = Mathf.Clamp(rawXPosition, -xRange, xRange);
         transform.localPosition = new Vector3(clampedXPosition,
-            this.transform.localPosition.y,
-            this.transform.localPosition.z);
+            transform.localPosition.y,
+            transform.localPosition.z);
 
         float rawYPosition = transform.localPosition.y + yOffset;
         float clampedYPosition = Mathf.Clamp(rawYPosition, -yRange, yRange);
-        transform.localPosition = new Vector3(this.transform.localPosition.x,
+        transform.localPosition = new Vector3(transform.localPosition.x,
             clampedYPosition,
-            this.transform.localPosition.z);
+            transform.localPosition.z);
     }
 }
