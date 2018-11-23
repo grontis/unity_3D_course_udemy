@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b013a831-1550-4231-b01f-0e7175ccc286" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/18_AA_CU2 Particle Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/18_AA_CU2 Particle Materials/Particle Materials.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/7_AA_CU2 Downloads.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/7_AA_CU2 Downloads/Modular Spaceship 1 StarSparrow.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_Ship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_Ship.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ship_08.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ship_08.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/splash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Generic Space Enemy - Ebal Studios.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Generic Space Enemy - Ebal Studios/Simple Generic Space Enemy - Not For Commercial Use.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Standard Assets/Utility/WaypointCircuit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Utility/WaypointCircuit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/musicPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/musicPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CollisionHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_Ship.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player_Ship.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Music Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Music Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_Ship.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_Ship.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ship_08.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ship_08.prefab.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +22,7 @@
     <session id="1168182337">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.opened" value="2" />
@@ -39,33 +30,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="4" />
+          <entry key="cs" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="4" />
+          <entry key="C#" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1277" />
+          <entry key="cs" value="1736" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1277" />
+          <entry key="C#" value="1736" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/scripts/MusicPlayer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="120">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
               <folding>
                 <marker date="1542959196981" expanded="false" signature="6:78" ph="..." />
                 <marker date="1542959196981" expanded="true" signature="121:516" ph="{...}" />
@@ -73,6 +64,21 @@
                 <marker date="1542959196981" expanded="true" signature="162:268" ph="/* if more than one music player in scene ... */" />
                 <marker date="1542959196981" expanded="true" signature="374:427" ph="{...}" />
                 <marker date="1542959196981" expanded="true" signature="440:508" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/scripts/Enemy.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding>
+                <marker date="1542962724621" expanded="true" signature="6:111" ph="..." />
+                <marker date="1542962724621" expanded="true" signature="147:644" ph="{...}" />
+                <marker date="1542962724621" expanded="true" signature="304:422" ph="{...}" />
+                <marker date="1542962724621" expanded="true" signature="475:642" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -106,22 +112,6 @@
                 <marker date="1542957526275" expanded="true" signature="1036:1117" ph="{...}" />
                 <marker date="1542957526275" expanded="true" signature="1153:1573" ph="{...}" />
                 <marker date="1542957526275" expanded="true" signature="1612:2242" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/CollisionHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-              <folding>
-                <marker date="1542959374815" expanded="true" signature="6:113" ph="..." />
-                <marker date="1542959374815" expanded="true" signature="222:737" ph="{...}" />
-                <marker date="1542959374815" expanded="true" signature="430:530" ph="{...}" />
-                <marker date="1542959374815" expanded="true" signature="566:607" ph="{...}" />
-                <marker date="1542959374815" expanded="true" signature="699:734" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -204,7 +194,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/scripts/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CollisionHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -217,6 +207,8 @@
         <option value="$PROJECT_DIR$/Assets/CollisionHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/MusicPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -291,12 +283,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542867208382</updated>
       <workItem from="1542867234908" duration="465000" />
-      <workItem from="1542954428188" duration="4915000" />
+      <workItem from="1542954428188" duration="8322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5380000" />
+    <option name="totallyTimeSpent" value="8787000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -309,7 +301,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="780" y="6" width="1138" height="1070" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10296846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -454,13 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-          <folding>
-            <marker date="1542959374815" expanded="true" signature="6:113" ph="..." />
-            <marker date="1542959374815" expanded="true" signature="222:737" ph="{...}" />
-            <marker date="1542959374815" expanded="true" signature="430:530" ph="{...}" />
-            <marker date="1542959374815" expanded="true" signature="566:607" ph="{...}" />
-            <marker date="1542959374815" expanded="true" signature="699:734" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -471,10 +455,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Enemy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/scripts/MusicPlayer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="120">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding>
             <marker date="1542959196981" expanded="false" signature="6:78" ph="..." />
             <marker date="1542959196981" expanded="true" signature="121:516" ph="{...}" />
@@ -482,6 +473,19 @@
             <marker date="1542959196981" expanded="true" signature="162:268" ph="/* if more than one music player in scene ... */" />
             <marker date="1542959196981" expanded="true" signature="374:427" ph="{...}" />
             <marker date="1542959196981" expanded="true" signature="440:508" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/scripts/Enemy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <marker date="1542962724621" expanded="true" signature="6:111" ph="..." />
+            <marker date="1542962724621" expanded="true" signature="147:644" ph="{...}" />
+            <marker date="1542962724621" expanded="true" signature="304:422" ph="{...}" />
+            <marker date="1542962724621" expanded="true" signature="475:642" ph="{...}" />
           </folding>
         </state>
       </provider>
