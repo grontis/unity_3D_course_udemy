@@ -8,9 +8,19 @@ public class Enemy : MonoBehaviour
 
 	[SerializeField] private GameObject _deathFx;
 	[FormerlySerializedAs("_parent")] [SerializeField] private Transform _fxParent;
+	[SerializeField] private int _scorePerHit = 12;//Enemy is worth this much score
+
+
+	private ScoreBoard _scoreboard;
 	
 	
 	private void Start()
+	{
+		AddBoxCollider();
+		_scoreboard = FindObjectOfType<ScoreBoard>(); 
+	}
+
+	private void AddBoxCollider()
 	{
 		Collider nonTriggerCollider = gameObject.AddComponent<BoxCollider>();
 		nonTriggerCollider.isTrigger = false;
@@ -22,5 +32,7 @@ public class Enemy : MonoBehaviour
 		fx.transform.parent = _fxParent;
 		Destroy(gameObject);
 		Destroy(fx, 1.5f);
+		
+		_scoreboard.ScoreHit(_scorePerHit);
 	}
 }
