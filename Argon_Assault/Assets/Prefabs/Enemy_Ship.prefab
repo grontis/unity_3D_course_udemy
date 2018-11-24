@@ -98,4 +98,4 @@ MonoBehaviour:
   _deathFx: {fileID: 1931736270787814, guid: b6efa681734c06746b7fe90309bb69b9, type: 2}
   _fxParent: {fileID: 0}
   _scorePerHit: 12
-  _maxHits: 9
+  _maxHits: 3

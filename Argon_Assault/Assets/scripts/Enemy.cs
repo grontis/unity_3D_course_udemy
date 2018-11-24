@@ -29,14 +29,18 @@ public class Enemy : MonoBehaviour
 
 	private void OnParticleCollision(GameObject other)
 	{
-		_scoreboard.ScoreHit(_scorePerHit);
-		_maxHits--;
-		
-		//TODO consider hit effects
+		ProcessHit();
 		if (_maxHits <= 0)
 		{
 			KillEnemy();
 		}
+	}
+
+	private void ProcessHit()
+	{
+		_scoreboard.ScoreHit(_scorePerHit);
+		_maxHits--;
+		//TODO consider hit effects
 	}
 
 	private void KillEnemy()
