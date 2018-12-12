@@ -1,32 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EnemyMovement : MonoBehaviour
 {
-
-	[SerializeField] private List<Block> _path;
-
-
+	[FormerlySerializedAs("_path")] [SerializeField] private List<Waypoint> path;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		PrintAllWaypoints();
+		//StartCoroutine(FollowPath());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
-	
-	
-	private void PrintAllWaypoints()
+
+	//IEnumerator return type allows for coroutines
+	IEnumerator FollowPath()
 	{
-		foreach (Block waypoint in _path)
+		foreach (Waypoint waypoint in path)
 		{
-			print(waypoint.name);
+			transform.position = waypoint.transform.position;
+			yield return new WaitForSeconds(1f); //yield and returns a wait for 1 second
 		}
 	}
 }
