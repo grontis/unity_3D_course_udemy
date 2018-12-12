@@ -9,8 +9,6 @@ using UnityEngine;
 public class CubeEditor : MonoBehaviour
 {
 
-
-	
 	private Waypoint waypoint;
 
 	private void Awake()
@@ -20,6 +18,7 @@ public class CubeEditor : MonoBehaviour
 
 	void Start()
 	{
+		
 	}
 	
 	// Update is called once per frame
@@ -41,9 +40,7 @@ public class CubeEditor : MonoBehaviour
 	}
 
 	private void UpdateLabel()
-	{
-		int gridSize = waypoint.GetGridSize();
-		
+	{		
 		TextMesh textMesh = GetComponentInChildren<TextMesh>();
 		string labelText = waypoint.GetGridPos().x +
 		                   "," + waypoint.GetGridPos().y;

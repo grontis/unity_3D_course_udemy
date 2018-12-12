@@ -5,16 +5,18 @@ using UnityEngine.Serialization;
 
 public class EnemyMovement : MonoBehaviour
 {
-	[FormerlySerializedAs("_path")] [SerializeField] private List<Waypoint> path;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		//StartCoroutine(FollowPath());
+		Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
+		List<Waypoint> path = pathfinder.GetPath();
+		StartCoroutine(FollowPath(path));
 	}
 
+
 	//IEnumerator return type allows for coroutines
-	IEnumerator FollowPath()
+	IEnumerator FollowPath(List<Waypoint> path)
 	{
 		foreach (Waypoint waypoint in path)
 		{
