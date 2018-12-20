@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
+    [SerializeField] Transform objectToPan;
+    [SerializeField] Transform targetEnemy;
+    
     // Update is called once per frame
     void Update()
     {
         
     }
+    
+    
 }
