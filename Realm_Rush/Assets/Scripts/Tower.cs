@@ -11,7 +11,7 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        objectToPan.LookAt(targetEnemy);
     }
     
     
