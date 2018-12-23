@@ -26,7 +26,6 @@ public class EnemyDamage : MonoBehaviour
     {
         hitPoints = hitPoints - 1; /*TODO change the -1 to be a
                                    variable that allows for different damage from different towers*/
-        print("Current hitpoints is " + hitPoints);
     }
 
     private void KillEnemy()
