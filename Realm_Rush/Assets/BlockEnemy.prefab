@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4142213501274754}
   - component: {fileID: 114853432557257278}
   - component: {fileID: 114320555860358996}
+  - component: {fileID: 2370031962537771611}
   m_Layer: 0
   m_Name: BlockEnemy
   m_TagString: Untagged
@@ -60,6 +61,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsExplored: 0
   ExploredFrom: {fileID: 0}
+--- !u!65 &2370031962537771611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051246067323782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!1 &1111821445875894
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +321,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828551101068042}
-  m_Text: 3,3
+  m_Text: 6,3
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1

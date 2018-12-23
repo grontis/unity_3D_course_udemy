@@ -5,29 +5,44 @@ using UnityEngine.Serialization;
 
 public class Waypoint : MonoBehaviour {
 	
-	const int gridSize = 10;
+	const int GridSize = 10;
 	private Vector2Int gridPos;
 
-	public bool IsExplored = false; //explored property for BFS algorithm
-	public Waypoint ExploredFrom;
+	[FormerlySerializedAs("IsExplored")] public bool isExplored = false; //explored property for BFS algorithm
+	[FormerlySerializedAs("ExploredFrom")] public Waypoint exploredFrom;
+	public bool isPlaceable = true;
 	
 	public int GetGridSize()
 	{
-		return gridSize;
+		return GridSize;
+	}
+
+	void Start()
+	{
+		Physics.queriesHitTriggers = true;
 	}
 
 	public Vector2Int GetGridPos()
 	{
 		return new Vector2Int(
-			Mathf.RoundToInt(transform.position.x / gridSize),
-			Mathf.RoundToInt(transform.position.z / gridSize)
+			Mathf.RoundToInt(transform.position.x / GridSize),
+			Mathf.RoundToInt(transform.position.z / GridSize)
 			);
 	}
 	
-	public void SetTopColor(Color color)
+	void OnMouseOver()
 	{
-		//set top surface color of block
-		MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-		topMeshRenderer.material.color = color;
+		if (Input.GetMouseButtonDown(0))
+		{
+			if (isPlaceable)
+			{
+				print(gameObject.name + " tower placement");
+			}
+			else
+			{
+				print("Cant place tower here");
+			}
+		}
 	}
+	
 }

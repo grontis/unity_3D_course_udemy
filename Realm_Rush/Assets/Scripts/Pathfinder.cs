@@ -62,8 +62,7 @@ public class Pathfinder : MonoBehaviour
 	
 	private void ColorStartAndEnd()
 	{
-		startWaypoint.SetTopColor(Color.black);
-		endWaypoint.SetTopColor(Color.white);
+		
 	}
 
 	private void BreadthFirstSearch()
@@ -75,7 +74,7 @@ public class Pathfinder : MonoBehaviour
 			searchCenter = queue.Dequeue();
 			HaltIfEndFound();
 			ExploreNeighbors();
-			searchCenter.IsExplored = true;
+			searchCenter.isExplored = true;
 		}
 	}
 
@@ -108,10 +107,10 @@ public class Pathfinder : MonoBehaviour
 	private void QueueNewNeighbors(Vector2Int exploreCoordinates)
 	{
 		Waypoint neighbor = grid[exploreCoordinates];
-		if (!neighbor.IsExplored && !queue.Contains(neighbor))
+		if (!neighbor.isExplored && !queue.Contains(neighbor))
 		{
 			queue.Enqueue(neighbor);
-			neighbor.ExploredFrom = searchCenter; //links together node being added to queue
+			neighbor.exploredFrom = searchCenter; //links together node being added to queue
 												  // and the node it was discovered from
 		}
 	}
@@ -122,17 +121,15 @@ public class Pathfinder : MonoBehaviour
 		Waypoint currentPoint = endWaypoint;
 		
 		//first add endpoint
-		path.Add(currentPoint);
-		
+		SetAsPath(currentPoint);
 		//previous point is the point current node was explored from
-		Waypoint previous = endWaypoint.ExploredFrom;
-
+		Waypoint previous = endWaypoint.exploredFrom;
 		//add all nodes in between end and start
 		while (previous != startWaypoint)
 		{
-			path.Add(previous);
+			SetAsPath(previous);
 			currentPoint = previous;
-			previous = currentPoint.ExploredFrom;
+			previous = currentPoint.exploredFrom;
 		}
 		
 		//add the start point lastly
@@ -140,11 +137,12 @@ public class Pathfinder : MonoBehaviour
 		
 		//the list path will need to be reversed
 		path.Reverse();
-
-		//colors the path
-		foreach (Waypoint node in path)
-		{
-			node.SetTopColor(Color.blue);
-		}
 	}
+
+	private void SetAsPath(Waypoint waypoint)
+	{
+		path.Add(waypoint);
+		waypoint.isPlaceable = false;
+	}
+	
 }
